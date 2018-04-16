@@ -13,7 +13,8 @@ module.exports = {
     },
     output:{
         path:config.dev.distPath,
-        filename:"asstes/"+package.name+"/js/[name].[hash].js"
+        filename:"asstes/"+package.name+"/js/[name].[hash].js",
+        publicPath: "/"
     },
     optimization:{
         splitChunks:{
