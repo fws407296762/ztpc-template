@@ -70,7 +70,16 @@ module.exports = {
                   limit: 10000,
                   name: path.join(config.dev.proPath,'fonts/[name].[hash:7].[ext]')
               }
+          },
+        {
+          test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|svgz)$/,
+          use:{
+            loader: 'file-loader',
+            options: {
+              name: 'assets/images/[name].[ext]?[hash]'
+            }
           }
+        }
       ]
     },
     resolve:{

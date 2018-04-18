@@ -1,0 +1,218 @@
+﻿/*-----------------------
+Web-pc:v1.0
+time: 2018.04.16
+-----------------------*/
+@charset "utf-8";
+*{box-sizing: border-box;}
+html, body, div, span, h3, h4, p,a, em, img, i, ul, li, form, label, table, tbody, tfoot, thead, tr, th, td,canvas, footer, header, nav, section, audio, video {
+    margin: 0;
+    padding: 0;
+}
+fieldset, img {
+  border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol, ul {
+    list-style: none;
+}
+caption, th {
+  text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before, q:after {
+    content: '';
+    content: none;
+}
+sup {
+  vertical-align:text-top;
+}
+sub {
+  vertical-align:text-bottom;
+}
+input, textarea, select {
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+  *font-size:100%; /*to enable resizing for IE*/
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img{vertical-align: top;}
+body {
+    background: #fff;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    color: #444;
+    font-size: 12px;
+}
+
+/* 字符 */
+@font-face {
+    font-family: 'iconfont';  /* project id 574671 */
+    src: url('//at.alicdn.com/t/font_574671_ga3ctltlcbn2vs4i.eot');
+    src: url('//at.alicdn.com/t/font_574671_ga3ctltlcbn2vs4i.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_574671_ga3ctltlcbn2vs4i.woff') format('woff'),
+    url('//at.alicdn.com/t/font_574671_ga3ctltlcbn2vs4i.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_574671_ga3ctltlcbn2vs4i.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ /* flex布局 */
+/* 中中 */
+.flex_cc{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* 中上 */
+.flex_ct{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction:column;
+}
+/* 中中竖 */
+.flex_ccc{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+/* 左中 */
+.flex_lc{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+/* 右中 */
+.flex_rc{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+/* 左上 */
+.flex_lt{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+/* 两边上 */
+.flex_st{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+/* 两边中 */
+.flex_sc{
+    display:flex;
+    display: -ms-flexbox;
+    -ms-justify-content:space-between;
+    -ms-align-items:center;
+    justify-content:space-between;
+    align-items:center;
+}
+/* 两边均匀 */
+.flex_sa{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+
+ /* element-ui 表格样式 */
+.el-table{
+    font-size: 12px;
+}
+.el-table th{
+    background-color: #728697;
+    color: #ffffff;    
+}
+ /* 筛选图标 */
+.el-table th .cell .el-table__column-filter-trigger i{
+    margin-left: 3px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.el-table th>.cell.highlight {
+    color: #ffffff;
+}
+/* 表格上下排序 */
+.el-table .sort-caret.ascending {
+    border-bottom-color: #ffffff;
+}
+.el-table .sort-caret.descending {
+    border-top-color: #ffffff;
+}
+ /* 表格高度 */
+.el-table th {
+  padding: 2px 0;
+}
+.el-table td{
+  padding: 6px 0;
+}
+.el-tag {
+  padding: 0 4px;
+  height: 22px;
+  line-height: 20px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+
+
+/* 表格头部筛选样式 */
+.table_header_icon{
+  position: relative;
+   /* border:1px solid blue; */
+  cursor: pointer;
+}
+.table_header_icon i{
+margin-left: 4px;
+color: #ffffff;
+font-weight: bold;
+}
+.table_header_icon .dropDown_box{
+background: #ffffff;
+z-index: 9990;
+position: absolute;
+top: 26px;
+left: 0px;
+border: 1px solid red;
+color: #333333;
+}
+
+/* 选框限高 */
+.el-table-filter{
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
