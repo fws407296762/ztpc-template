@@ -2,7 +2,7 @@
 	<div>
 		<div class="header"></div>
 		<div class="<body></body>"></div>
-		<div classfooter></div>
+		<div class="footer"></div>
 	</div>
 </template>
 
