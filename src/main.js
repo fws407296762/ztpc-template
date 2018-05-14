@@ -9,7 +9,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Element from "element-ui";
 import routes from "./routes";
-
+import App from "./App";
+import ApiMixins from "./components/ajax/api";
+import 'babel-polyfill';
 //加载路由组件
 Vue.use(VueRouter);
 //加载 Element 组件
@@ -22,6 +24,9 @@ const router = new VueRouter({
 
 //实例化Vue
 const vm = new Vue({
-    router
+  mixins:[ApiMixins],
+  router,
+  template: '<App/>',
+  components: { App }
 }).$mount("#root");
 
