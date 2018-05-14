@@ -7,15 +7,9 @@ export default [
         }
     },
 	{
-        path:"/abc",
+        path:"/ys",
         component(resolve){
-            require(["../pages/home"],resolve);
-        }
-    },
-	{
-        path:"/abc",
-        component(resolve){
-            require(["../pages/home"],resolve);
+            require(["../pages/ys"],resolve);
         }
     }
 ]
