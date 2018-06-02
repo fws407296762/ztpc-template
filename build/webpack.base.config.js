@@ -5,7 +5,7 @@ const copyWebpackPlugin = require("copy-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const package = require("../package.json");
 const config = require("./config");
-
+console.log(config)
 module.exports = {
     entry:{
         app:path.join(config.dev.srcPath,"main.js"),
@@ -13,7 +13,7 @@ module.exports = {
     },
     output:{
         path:config.dev.distPath,
-        filename:"asstes/"+package.name+"/js/[name].[hash].js",
+        filename:config.project + "/assets/"+"/"+config.moduleName+"/js/[name].[hash].js",
         publicPath: "/"
     },
     optimization:{
@@ -93,7 +93,7 @@ module.exports = {
             title:package.description,
             projectName:package.name,
             template:path.join(config.dev.srcPath,"views/index.html"),
-            filename:path.join(config.dev.distPath,"views/"+package.name+"/index.html")
+            filename:path.join(config.dev.distPath,config.project + "/views/"+config.moduleName+"/index.html")
         }),
         new copyWebpackPlugin([
             {
