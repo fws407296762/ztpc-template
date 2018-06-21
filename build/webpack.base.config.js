@@ -13,7 +13,7 @@ module.exports = {
     },
     output:{
         path:config.dev.distPath,
-        filename:"asstes/"+package.name+"/js/[name].[hash].js",
+        filename:config.project + "/assets/"+config.moduleName+"/js/[name].[hash].js",
         publicPath: "/"
     },
     optimization:{
@@ -76,7 +76,7 @@ module.exports = {
           use:{
             loader: 'file-loader',
             options: {
-              name: 'assets/images/[name].[ext]?[hash]'
+              name: config.project + '/assets/'+config.moduleName+'/images/[name].[ext]?[hash]'
             }
           }
         }
@@ -91,9 +91,10 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title:package.description,
-            projectName:package.name,
+            projectName:config.project,
+            moduleName:config.moduleName,
             template:path.join(config.dev.srcPath,"views/index.html"),
-            filename:path.join(config.dev.distPath,"views/"+package.name+"/index.html")
+            filename:path.join(config.dev.distPath,config.project + "/views/"+config.moduleName+"/index.html")
         }),
         new copyWebpackPlugin([
             {

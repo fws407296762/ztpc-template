@@ -13,10 +13,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const package = require("../package");
 const config = require("./config");
 
-const devWebpackConfig = merge(baseWebpackConfig,{
+const proWebpackConfig = merge(baseWebpackConfig,{
     plugins:[
 
     ]
 })
 
-module.exports = devWebpackConfig;
+module.exports = proWebpackConfig;

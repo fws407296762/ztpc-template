@@ -37,7 +37,7 @@ const devWebpackConfig = merge(baseWebpackConfig,{
         inline:true,
         contentBase: false,
         open: true,
-        openPage:"views/"+package.name
+        openPage:config.project + "/views/"+config.moduleName
     }
 })
 

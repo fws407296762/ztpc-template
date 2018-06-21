@@ -6,17 +6,27 @@
 
 const path = require('path');
 const package = require("../package");
+
+let name = package.name;
+let nameSplit = name.split("-");
+let moduleName = nameSplit[nameSplit.length - 1];
+let groupIndex = nameSplit.indexOf("group");
+let project = package.project || (groupIndex > 0 ? 'group' : 'store');
 let srcPath = path.join(__dirname,"../src");
 let distPath = path.join(__dirname,"../dist/"),
-    assetsPath = path.join(distPath,"assets");
+    assetsPath = path.join(distPath,project + "/assets/");
+
 module.exports = {
+    name:name,
+    moduleName:moduleName,
+    project:project,
     dev:{
-        srcPath:srcPath,
-        distPath:distPath,
-        assetsPath:assetsPath,
-        proPath:path.join(assetsPath,package.name),
-        host:"localhost",
-        port:8080,
-        autoOpenBrowser:false
+      srcPath:srcPath,
+      distPath:distPath,
+      assetsPath:assetsPath,
+      proPath:path.join(assetsPath,moduleName),
+      host:"localhost",
+      port:8080,
+      autoOpenBrowser:false
     }
 }
