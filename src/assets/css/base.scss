@@ -1,0 +1,261 @@
+﻿/*-----------------------
+Web-pc:v1.0
+time: 2018.04.16
+-----------------------*/
+@charset "utf-8";
+html, body, div, span, h3, h4, p,a, em, img, i, ul, li, form, label, table, tbody, tfoot, thead, tr, th, td,canvas, footer, header, nav, section, audio, video {
+    margin: 0;padding: 0;border: 0;font: inherit;vertical-align: baseline;}
+ol, ul {list-style: none;}
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+a {color: inherit;text-decoration: none;}
+*{box-sizing: border-box;}
+html,body{width: 100%;height: 100%;}
+
+/* $font12:12px; */
+/* $font13:13px; */
+/* $font14:14px; */
+
+$blueColor:#409eff;
+
+body {background: #fff;font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;color: #444;font-size: 14px;}
+
+/* 字符 */
+@font-face {
+  font-family: 'iconfont';  /* project id 565095 */
+    src: url('//at.alicdn.com/t/font_565095_hbg2mmlqtvhg2e29.eot');
+    src: url('//at.alicdn.com/t/font_565095_hbg2mmlqtvhg2e29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_565095_hbg2mmlqtvhg2e29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_565095_hbg2mmlqtvhg2e29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_565095_hbg2mmlqtvhg2e29.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// margin
+// margin-top
+.margin-top10{margin-top: 10px!important;}
+.margin-top20{margin-top: 20px!important;}
+.margin-top30{margin-top: 30px!important;}
+.margin-top50{margin-top: 50px!important;}
+.margin-top100{margin-top: 100px!important;}
+// margin-left
+.margin-left10{margin-left: 10px!important;}
+.margin-left20{margin-left: 20px!important;}
+.margin-left30{margin-left: 30px!important;}
+.margin-left50{margin-left: 50px!important;}
+.margin-left100{margin-left: 100px!important;}
+// margin-right
+.margin-right10{margin-right: 10px!important;}
+.margin-right20{margin-right: 20px!important;}
+.margin-right30{margin-right: 30px!important;}
+.margin-right50{margin-right: 50px!important;}
+.margin-right100{margin-right: 100px!important;}
+// margin-bottom
+.margin-bottom10{margin-bottom: 10px!important;}
+.margin-bottom20{margin-bottom: 20px!important;}
+.margin-bottom30{margin-bottom: 30px!important;}
+.margin-bottom50{margin-bottom: 50px!important;}
+.margin-bottom100{margin-bottom: 100px!important;}
+// padding
+// padding-top
+.padding-top10{padding-top: 10px!important;}
+.padding-top20{padding-top: 20px!important;}
+.padding-top30{padding-top: 30px!important;}
+.padding-top50{padding-top: 50px!important;}
+.padding-top100{padding-top: 100px!important;}
+// padding-left
+.padding-left10{padding-left: 10px!important;}
+.padding-left20{padding-left: 20px!important;}
+.padding-left30{padding-left: 30px!important;}
+.padding-left50{padding-left: 50px!important;}
+.padding-left100{padding-left: 100px!important;}
+// padding-bottom
+.padding-bottom10{padding-bottom: 10px!important;}
+.padding-bottom20{padding-bottom: 20px!important;}
+.padding-bottom30{padding-bottom: 30px!important;}
+.padding-bottom50{padding-bottom: 50px!important;}
+.padding-bottom100{padding-bottom: 100px!important;}
+
+ /* flex布局 */
+/* 中中 */
+.flex_cc{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* 中上 */
+.flex_ct{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction:column;
+}
+/* 中中竖 */
+.flex_ccc{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+/* 左中 */
+.flex_lc{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+/* 右中 */
+.flex_rc{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+/* 左上 */
+.flex_lt{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+/* 两边上 */
+.flex_st{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+/* 两边中 */
+.flex_sc{
+    display:flex;
+    display: -ms-flexbox;
+    -ms-justify-content:space-between;
+    -ms-align-items:center;
+    justify-content:space-between;
+    align-items:center;
+}
+/* 两边均匀 */
+.flex_sa{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+ /* element-ui 表格改造 */
+.el-table th{
+    background-color: #f2f6fc;
+    color: #666666;    
+}
+.el-table td, .el-table th{
+    padding: 5px 0px;
+}
+.tablink{
+    color: #409eff;
+    cursor: pointer;
+    border-bottom: 1px solid #409eff;
+}
+
+/* 搜索栏 input select 改造 */
+.filter-box .el-input--medium {
+    font-size: 13px;
+}
+.el-input__inner{
+    padding: 0px 8px;
+}
+.filter-box  .el-select-dropdown__item{
+    font-size: 13px!important;
+}
+
+/* 树状菜单栏 */
+.el-menu-item, .el-submenu__title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+/* 弹出层改造 */
+.el-dialog{
+  min-width: 300px;
+  .el-dialog__header{
+    text-align: left;
+    padding: 20px 15px 20px;
+    .el-dialog__title {
+      font-size: 16px;
+    }
+  }
+  .el-dialog__body{
+    padding: 20px 15px;
+  }
+  .el-dialog__footer {
+    padding: 10px 15px 20px;
+  }
+}
+// 按钮样式
+.common-btn{
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  margin-right: 15px;
+  -webkit-transition: .1s;
+  transition: .1s;
+  padding: 7px 30px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.common-btn:hover{
+    opacity: 0.9;
+}
+.btn-blue{
+  color: #fff;
+  background-color: #409EFF;
+  border-color: #409EFF;
+}
+.btn-blue{
+  color: #fff;
+  background-color: #409EFF;
+  border-color: #409EFF;
+}
+.btn-white{
+  color: #606266;
+  border: 1px solid #dcdfe6;
+}
+.opacity07{
+    opacity: 0.7;
+}
+//小型单选
+.el-radio-mini .el-radio-button--mini .el-radio-button__inner {
+    padding: 4px 4px;
+    font-size: 12px!important;
+    border-radius: 0;
+}
+.el-radio-button:first-child .el-radio-button__inner{
+    border-radius:4px 0 0 4px;
+}
+.el-radio-button:last-child .el-radio-button__inner {
+    border-radius: 0 4px 4px 0;
+}
+.el-input-group__prepend {padding: 0 10px;}
+// 基础数据管理input背景修改
+.sel-item-box{
+    .sel-item-td{
+        .el-input__inner{
+            border: none;
+            height: 26px;
+            padding:0px 5px;
+        }
+    }
+}
+
+.router__link{color: $blueColor;text-decoration: underline;}

@@ -20,10 +20,10 @@
 </template>
 
 <script>
-  import frameHeader from './../src/components/frame-header.vue';
-  import frameNav from './../src/components/frame-nav.vue';
-  import historyRecord from './../src/components/history-record.vue';
-  import subNav from './../src/components/sub-nav.vue';
+  import frameHeader from './components/frame-header.vue';
+  import frameNav from './components/frame-nav.vue';
+  import historyRecord from './components/history-record.vue';
+  import subNav from './components/sub-nav.vue';
   export default {
     data() {
       return {
@@ -127,6 +127,7 @@
 </script>
 
 <style lang="scss">
+  @import "./../src/assets/css/base.scss";
   //引入通用样式
   .sysframe-box{
     height: 100%;

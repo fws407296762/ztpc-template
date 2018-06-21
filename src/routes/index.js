@@ -1,15 +1,30 @@
 
 export default [
-    {
-        path:"/",
-        component(resolve){
-            require(["../pages/home"],resolve);
-        }
+  {
+    path:"/",
+    redirect:{
+      name:"accessoriesPurchase"
     },
-	{
-        path:"/ys",
+    children:[
+      {
+        path:"purchase",
+        name:"accessoriesPurchase",
+        redirect:{
+          name:"accessoriesPurchaseList"
+        },
         component(resolve){
-            require(["../pages/ys"],resolve);
-        }
-    }
+          require(["../pages/purchase"],resolve);
+        },
+        children:[
+          {
+            path:"list",
+            name:"accessoriesPurchaseList",
+            component(resolve){
+              require(["../pages/purchase/list"],resolve);
+            }
+          }
+        ]
+      }
+    ]
+  }
 ]
