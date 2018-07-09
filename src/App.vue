@@ -10,7 +10,7 @@
       <!-- 内容区 -->
       <div class="sysframe-con" :class="{'sysframe-open':sysframeOpen}">
         <!-- 历史记录 -->
-        <historyRecord :historyData="historyData"></historyRecord>
+        <!--<historyRecord :historyData="historyData"></historyRecord>-->
         <div class="page-content">
           <router-view></router-view>
         </div>
@@ -29,52 +29,40 @@
       return {
         navData:[
           {
-            id:"1",
-            name:"首页"
-          },
-          {
             id:"2",
-            name:"门店管理"
-          },
-          {
-            id:"3",
-            name:"人员管理"
-          },
-          {
-            id:"4",
             name:"客户管理"
           },
           {
-            id:"5",
-            name:"整车销售管理"
+            id:"3",
+            name:"整车管理"
           },
           {
-            id:"6",
+            id:"4",
             name:"精品配件管理"
           },
           {
+            id:"5",
+            name:"增值业务管理"
+          },
+          {
+            id:"6",
+            name:"集采中心"
+          },
+          {
             id:"7",
-            name:"延伸服务管理"
+            name:"查询统计"
           },
           {
             id:"8",
-            name:"客户端管理"
+            name:"终端管理"
           },
           {
             id:"9",
-            name:"设备管理"
+            name:"基础数据管理"
           },
           {
             id:"10",
-            name:"集团管理"
-          },
-          {
-            id:"11",
-            name:"采集中心"
-          },
-          {
-            id:"12",
-            name:"人员以及基础信息管理"
+            name:"系统设置"
           }
         ],
         currentNav:'',

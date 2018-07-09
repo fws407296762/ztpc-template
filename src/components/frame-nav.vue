@@ -6,9 +6,9 @@
 <template>
   <div class="frame-title-box flex_lc">
 		<!-- 导航根据数据遍历 -->
-		<div class="frame-title-item" v-for="item in navData" :class="{'nav-active':currentNav == item.id}" :key="item.id">
-			<a>{{item.name}}</a>
-		</div>
+    <div class="frame-title-item" v-for="item in navData" :class="{'nav-active':currentNav == item.url}" :key="item.id">
+      <a :href="item.url">{{item.name}}</a>
+    </div>
   </div>
 </template>
 

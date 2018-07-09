@@ -14,9 +14,12 @@ const package = require("../package");
 const config = require("./config");
 
 const proWebpackConfig = merge(baseWebpackConfig,{
-    plugins:[
-
-    ]
+  plugins:[
+    new webpack.DefinePlugin({
+      baseURL:JSON.stringify("http://emptest.jingruiauto.com")
+    })
+  ],
+  mode:"development"
 })
 
 module.exports = proWebpackConfig;

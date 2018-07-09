@@ -14,31 +14,23 @@ const package = require("../package");
 const config = require("./config");
 
 const devWebpackConfig = merge(baseWebpackConfig,{
-    plugins:[
-        new webpack.HotModuleReplacementPlugin(),
-        new HtmlWebpackPlugin({
-            title:package.description,
-            projectName:package.name,
-            template:path.join(config.dev.srcPath,"views/index.html"),
-            filename:path.join(config.dev.distPath,"views/"+package.name+"/index.html")
-        }),
-        new copyWebpackPlugin([
-            {
-                from: path.join(config.dev.srcPath,"assets"),
-                to:config.dev.proPath,
-                ignore: ['.*']
-            }
-        ])
-    ],
-    //webpack-dev-server 再运行的时候是根据 output 的目录来运行的
-    devServer:{
-        compress: true,
-        hot:true,
-        inline:true,
-        contentBase: false,
-        open: true,
-        openPage:config.project + "/views/"+config.moduleName
-    }
-})
+  plugins:[
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      baseURL:JSON.stringify("http://empdev.jingruiauto.com")
+    })
+  ],
+  //webpack-dev-server 再运行的时候是根据 output 的目录来运行的
+  devServer:{
+    compress: true,
+    hot:true,
+    inline:true,
+    contentBase: false,
+    open: true,
+    openPage:config.project + "/views/"+config.moduleName
+  },
+  mode:"development"
+});
+
 
 module.exports = devWebpackConfig;

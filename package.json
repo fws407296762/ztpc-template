@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --config build/webpack.dev.config.js",
-    "build": "webpack --config build/webpack.pro.config.js"
+    "build.dev": "webpack --config build/build.js --dev",
+    "build test": "webpack --config build/build.js --test",
+    "build online": "webpack --config build/build.js --online"
   },
   "author": "{{ author }}",
   "license": "ISC",
